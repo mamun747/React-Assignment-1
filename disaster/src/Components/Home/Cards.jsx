@@ -1,11 +1,11 @@
 import { useState } from "react";
 import { Card } from "../Common/Card";
 import { Container } from "../Common/Container";
-import ChatOption, { CrossButton } from "../Icons/Icon";
+import ChatOption from "../icons/Icon";
 import { ChatBox } from "../Common/ChatBox";
 
 export const Cards = () => {
-  const [active, setActive] = useState(true);
+  const [active, setActive] = useState(false);
   const toggleOption = () => {
     setActive((pre) => !pre);
   };
