@@ -1,18 +1,25 @@
 import './App.css'
-// import { MobileNav } from './Components/Common/MobileNav'
 import { CommonNav } from './Components/Common/CommonNav'
 import { Cards } from './Components/Home/Cards'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Incidents } from './Components/Home/Incidents'
 
 function App() {
-
   return (
-    <>
     <div className='font-onest'>
-      {/* <MobileNav/> */}
-    <CommonNav/>
-    <Cards/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={
+            <>
+            <CommonNav/>
+            <Cards/>
+            </>
+          }>
+          </Route>
+          <Route path='/incidents' element={<Incidents/>}/>
+        </Routes>
+      </BrowserRouter>
     </div>
-    </>
   )
 }
 

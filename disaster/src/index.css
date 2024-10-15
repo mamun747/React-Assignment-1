@@ -5,3 +5,7 @@
 body{
     font-family: "Onest", sans-serif;
 }
+.active{
+    color: black !important;
+    font-weight: bold;
+}

@@ -2,6 +2,7 @@ import { useState } from "react";
 import { navItem } from "../Data/data";
 import { Search } from "../icons/Icon";
 import { MobileNav } from "./MobileNav";
+import { NavLink } from "react-router-dom";
 export const CommonNav = () => {
     const [active, setActive] = useState(false);
     const handleToggle = () => {
@@ -17,9 +18,9 @@ export const CommonNav = () => {
         <div>
           <div className="md:flex hidden gap-2 lg:gap-[18px] xl:gap-[35px]">
             {navItem.map((navItems, i) => (
-              <p key={i} className="lg:text-[14px] md:text-twelve text-[10px] text-accent cursor-pointer">
+              <NavLink key={i} to={`/${navItems}`}><p className="lg:text-[14px] md:text-twelve text-[10px] text-accent cursor-pointer">
                 {navItems}
-              </p>
+              </p></NavLink>
             ))}
           </div>
         </div>
