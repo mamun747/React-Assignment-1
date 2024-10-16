@@ -7,3 +7,11 @@ export const Text = ({children, classname}) => {
     </h1>
   );
 };
+
+export const Title = ({children, classname}) => {
+  return(
+    <>
+    <h1 className={CN("font-bold text-2xl text-[#09090B]", classname)}>{children}</h1>
+    </>
+  )
+}

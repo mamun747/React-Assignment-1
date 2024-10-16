@@ -5,6 +5,8 @@ import { Subtitle } from "../Common/subtitle"
 import { NewIncidentsData } from "../Data/data"
 import { useEffect } from "react"
 import { Description } from "./Description"
+import { CommonContainer } from "../Common/CommonContainer"
+import { Title } from "../Common/Text"
 
 export const NewIncident = ({onclick}) => {
   const [isActive, setIsActive] = useState(() => {
@@ -28,9 +30,9 @@ export const NewIncident = ({onclick}) => {
     <Nav>
     <SecondNav fonclick={onclick} thirdonclick={onclick} secondonclick={togglePage}/>
     </Nav>
-    <div className="max-w-[753px] h-[445px] md:text-start text-center mx-auto mt-10">
+    <CommonContainer>
       <div>
-        <h1 className="font-bold text-2xl text-[#09090B]">Which of these best describes the incident?</h1>
+        <Title>Which of these best describes the incident?</Title>
         <div className="flex flex-wrap gap-[11px] pt-[25px] md:justify-normal justify-center">
           {
             NewIncidentsData.map(({img, title}, i) => (
@@ -44,7 +46,7 @@ export const NewIncident = ({onclick}) => {
           }
         </div>
       </div>
-    </div>
+    </CommonContainer>
           </>
       )  
     }
