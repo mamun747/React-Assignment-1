@@ -1,4 +1,4 @@
-import CN from '../Function/Cn'
+import { CN } from '../Function/Cn'
 export const Container = ({children, classname}) => {
   return (
     <>

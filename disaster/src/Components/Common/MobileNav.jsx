@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import { navItem } from "../Data/data";
 
 export const MobileNav = ({onclick}) => {
@@ -9,9 +10,11 @@ export const MobileNav = ({onclick}) => {
             <img src="/logo.png" alt="" />
             <div className="space-y-1 pl-6 pt-6">
               {navItem.map((value, i) => (
-                <p key={i} className="text-base text-accent cursor-pointer">
+                <NavLink key={i} to={`/${value}`}>
+                  <p key={i} className="text-base text-accent cursor-pointer">
                   {value}
                 </p>
+                </NavLink>
               ))}
             </div>
           </div>

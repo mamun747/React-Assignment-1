@@ -157,3 +157,19 @@ export const Plus = ({ props }) => (
     </defs>
   </svg>
 );
+
+export const HorizontalLine = ({classname}) => (
+  <svg
+    width="610"
+    height="29"
+    viewBox="0 0 610 29"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...classname}
+  >
+    <rect x="6" y="13" width="598" height="3" fill="#E4E4E7" />
+    <circle cx="15" cy="14.5" r="14.5" fill="#E4E4E7" />
+    <circle cx="305" cy="14.5" r="14.5" fill="#E4E4E7" />
+    <circle cx="595" cy="14.5" r="14.5" fill="#E4E4E7" />
+  </svg>
+);

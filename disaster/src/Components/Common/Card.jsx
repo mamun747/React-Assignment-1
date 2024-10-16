@@ -1,6 +1,5 @@
 import { Container } from './Container';
 import { cardItems } from '../Data/data';
-import ChatOption from '../Icons/Icon';
 export const Card = () => {
   return (
     <>

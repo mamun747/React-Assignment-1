@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { Card } from "../Common/Card";
 import { Container } from "../Common/Container";
-import ChatOption from "../icons/Icon";
 import { ChatBox } from "../Common/ChatBox";
+import ChatOption from "../Icons/Icon";
 
 export const Cards = () => {
   const [active, setActive] = useState(false);

@@ -57,3 +57,96 @@ export const cardItems = [
         text: "Blizzard"
     }
 ];
+
+export const CardData = [
+    {
+        img: "/type.png",
+        title: "What type of incident?",
+        subTitle: "Choose the category that best describes the incident."
+    },
+    {
+        img: "/info.png",
+        title: "Tell us about the incident?",
+        subTitle: "Let’s connect the dots and see where to start."
+    },
+    {
+        img: "/location.png",
+        title: "Where did the incident occur?",
+        subTitle: "Lorem ipsum dolar sit general sac mascho werho"
+    }
+];
+
+export const NewIncidentsData = [
+    {
+        img: "/Avalanche.png",
+        title: "Avalanche"
+    },
+    {
+        img: "/Biological.png",
+        title: "Biological"
+    },
+    {
+        img: "/Blizzard.png",
+        title: "Blizzard"
+    },
+    {
+        img: "/Cold/Freezing.png",
+        title: "Cold/Freezing"
+    },
+    {
+        img: "/Drought.png",
+        title: "Drought"
+    },
+    {
+        img: "/Earthquake.png",
+        title: "Earthquake"
+    },
+    {
+        img: "/Flooding.png",
+        title: "Flooding"
+    },
+    {
+        img: "/HeatWave.png",
+        title: "Heat Wave"
+    },
+    {
+        img: "/Hail.png",
+        title: "Hail"
+    },
+    {
+        img: "/Lightning.png",
+        title: "Lightning"
+    },
+    {
+        img: "/ManMade.png",
+        title: "Man Made"
+    },
+    {
+        img: "/Mudslide.png",
+        title: "Mudslide"
+    },
+    {
+        img: "/SevereStorm.png",
+        title: "Severe Storm"
+    },
+    {
+        img: "/Strong Wind.png",
+        title: "Strong Wind"
+    },
+    {
+        img: "/Tornado.png",
+        title: "Tornado"
+    },
+    {
+        img: "/Tsunami.png",
+        title: "Tsunami"
+    },
+    {
+        img: "/VolcanicEruption.png",
+        title: "Volcanic Eruption"
+    },
+    {
+        img: "/Wildfire.png",
+        title: "Wildfire"
+    },
+];

@@ -1,11 +1,9 @@
 import { useState } from "react";
-import { Text } from "./Text"; // Assuming you have a Text component
 import { navItem } from "../Data/data";
-import { Search } from "../icons/Icon";
 import { MobileNav } from "./MobileNav";
 import { NavLink } from "react-router-dom";
-import { Button } from "./Button";
-export const CommonNav = ({children, subtitle, button}) => {
+
+export const CommonNav = () => {
     const [active, setActive] = useState(false);
     const handleToggle = () => {
         setActive(prev => !prev);
@@ -13,7 +11,6 @@ export const CommonNav = ({children, subtitle, button}) => {
 
     return (
         <>
-            <nav className="bg-dark-gray py-[23px]">
                 <div className="flex justify-between items-center px-2 md:px-5 lg:px-[85.5px]">
                     <div>
                         <img src="/logo.png" alt="Logo" />
@@ -56,30 +53,7 @@ export const CommonNav = ({children, subtitle, button}) => {
 
                 {/* Divider line */}
                 <div className="w-full border border-[#3F3F46] rounded-[10px] mt-[17px]"></div>
-
-                {/* Page name */}
-                <div className="flex justify-between items-center px-3 md:px-5 lg:px-10 xl:px-[86px] pt-8">
-                    <div>
-                        <p className="text-accent text-[12px] pb-[6px]">{subtitle}</p>
-                        <Text>{children}</Text>
-                    </div>
-                    <div className="flex flex-col md:flex-row gap-2 md:gap-[10px] lg:gap-3 xl:gap-[14px] items-center">
-                        <div className="flex items-center bg-white gap-[5px] text-accent rounded-md border-0 outline-none py-[10px] md:py-[15px] lg:py-[17px] text-[10px] md:text-twelve pl-1 md:pl-[10px]">
-                            <Search />
-                            <input type="text" placeholder="Search incident" className="border-0 outline-none" />
-                        </div>
-                        <div className="flex items-center bg-white gap-[5px] rounded-md border-0 outline-none py-[10px] md:py-[15px] lg:py-[17px] px-[10px] text-[10px] md:text-twelve">
-                            <p className="text-normal-accent">Sort By: </p>
-                            <input type="text" placeholder="Date modified" className="border-0 outline-none text-accent" />
-                        </div>
-                        <div>
-                            {button}
-                        </div>
-                    </div>
-                </div>
-
-                {active && <MobileNav onClick={handleToggle} />}
-            </nav>
+                {active && <MobileNav onclick={handleToggle} />}
         </>
     );
 };
