@@ -30,11 +30,12 @@ export const Incidents = () => {
           <Navbar
             subtitle="Home - Incidents"
             button={
-              <Button el={toggleActive}>
+              <button onClick={toggleActive}><Button>
                 <div className="flex items-center gap-[4px]">
                   <Plus /> New Incident
                 </div>
               </Button>
+              </button>
             }
           >
             Incidents

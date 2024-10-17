@@ -3,12 +3,27 @@ import { SecondNav } from "../Common/SecondNav"
 import { CommonContainer } from "../Common/CommonContainer"
 import { Title } from "../Common/Text"
 import { Subtitle } from "../Common/subtitle"
+import { useEffect, useState } from "react"
+import { Address } from "./Address"
 
 export const Description = ({handleClick}) => {
+  const [click, setClick] = useState(() => {
+    const state = localStorage.getItem("state");
+    state === "true" ? true : false;
+  })
+  useEffect(() => {
+    localStorage.setItem("state", click);
+  }, [click]);
+  const toggleComponent = () => {
+    setClick(pre => !pre);
+  }
   return (
     <>
-    <Nav>
-        <SecondNav fonclick={handleClick} thirdonclick={handleClick}/>
+    {click ? <Address toggle={toggleComponent}/> : 
+    (
+      <>
+       <Nav>
+        <SecondNav step="Next step" fonclick={handleClick} secondonclick={toggleComponent} thirdonclick={handleClick}/>
     </Nav>
     <CommonContainer>
       <div>
@@ -28,6 +43,9 @@ export const Description = ({handleClick}) => {
       </div>
       </div>
     </CommonContainer>
+    </>
+    )
+  }
     </>
   )
 }

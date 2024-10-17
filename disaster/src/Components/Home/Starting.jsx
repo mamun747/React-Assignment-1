@@ -20,13 +20,10 @@ export const Starting = ({ onclick }) => {
   return (
     <>
       <Nav>
-        <CommonNav />
+        <CommonNav/>
       </Nav>
       { active ? (
         <>
-      <div className="pl-5 pt-2">
-        <Button el={onclick}>&lt; Back</Button>
-      </div>
 
       <div className="md:max-w-[815px] mx-auto h-[457px] mt-[85px]">
         <div className="flex justify-center flex-col items-center">
@@ -54,7 +51,7 @@ export const Starting = ({ onclick }) => {
           </div>
           </div>
           <div className="text-center pt-[55px] md:pt-[85px] pb-[44px] md:pb-[164px]">
-          <Button el={toggleActive}>Get Started</Button>
+          <button onClick={toggleActive}><Button>Get Started</Button></button>
           </div>
         </div>
         </>
