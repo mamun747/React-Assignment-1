@@ -4,6 +4,7 @@ import { Incidents } from './Components/Home/Incidents'
 import { Layout } from './Components/layout/layout'
 import { SecondNav } from './Components/Common/SecondNav'
 import { Locations } from './Components/Home/Locations'
+import { Activities } from './Components/Home/Activities'
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path='/incidents' element={<Incidents/>}/>
           <Route path='/secondnav' element={<SecondNav/>}/>
           <Route path='/Locations' element={<Locations/>}/>
+          <Route path='/Activities' element={<Activities/>}/>
         </Routes>
       </BrowserRouter>
     </div>
