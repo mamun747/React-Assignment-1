@@ -167,7 +167,31 @@ export const Locations = () => {
             </div>
               <div className="max-w-[526px] h-[503px] flex flex-col gap-5 mx-auto">
                 <Subtitle classname="text-[14px] pb-0">Incident Map</Subtitle>
+                <div className="relative">
                 <img src="/map.png" className="rounded-[10px]" alt="" />
+                <div>
+                  <div>
+                  <img src="/location-border.png" className="w-[20px] md:w-fit absolute top-[56px] left-[168px]"  alt="" />
+                  <div className="w-[15px] md:w-[30px] h-[10px] opacity-[40%] absolute bg-black rounded-3xl md:top-[94px] top-[77px] left-[171px]"></div>
+                  </div>
+                  <div>
+                    <img src="/location-border.png" className="w-[20px] md:w-fit absolute left-[105px] top-[116px]"  alt="" />
+                    <div className="md:w-[30px] w-[15px] h-[10px] opacity-[40%] absolute bg-black rounded-3xl top-[140px] md:top-[154px] left-[108px]"></div>
+                  </div>
+                  <div>
+                  <img src="/location-border.png" className="w-[20px] md:w-fit absolute top-[116px] left-[203px]"  alt="" />
+                  <div className="w-[15px] md:w-[30px] h-[10px] opacity-[40%] absolute bg-black rounded-3xl top-[138px] md:top-[154px] left-[206px]"></div>
+                  </div>
+                  <div>
+                  <img src="/location-border.png" className="w-[20px] md:w-fit absolute top-[156px] md:top-[196px] left-[131px]"  alt="" />
+                  <div className="w-[15px] md:w-[30px] h-[10px] opacity-[40%] absolute bg-black rounded-3xl top-[177px] md:top-[234px] left-[134px]"></div>
+                  </div>
+                  <div>
+                  <img src="/location-border.png" className="w-[20px] md:w-fit absolute top-[166px] md:top-[176px] left-[203px]"  alt="" />
+                  <div className="w-[15px] md:w-[30px] h-[10px] opacity-[40%] absolute bg-black rounded-3xl top-[188px] md:top-[214px] left-[206px]"></div>
+                  </div>
+                </div>
+                </div>
                 <Subtitle classname="text-[14px] pb-0">Start 19.1232, -118.233     End 19.3245, -119.2323</Subtitle>
               </div>
             </div>
