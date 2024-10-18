@@ -6,6 +6,7 @@ import { SecondNav } from './Components/Common/SecondNav'
 import { Locations } from './Components/Home/Locations'
 import { Activities } from './Components/Home/Activities'
 import { Documents } from './Components/Home/Documents'
+import { CypherAI } from './Components/Home/CypherAI'
 
 function App() {
   return (
@@ -20,6 +21,8 @@ function App() {
           <Route path='/Locations' element={<Locations/>}/>
           <Route path='/Activities' element={<Activities/>}/>
           <Route path='/Documents' element={<Documents/>}/>
+          <Route path='/Cypher AI' element={<CypherAI/>}/>
+          <Route/>
         </Routes>
       </BrowserRouter>
     </div>
