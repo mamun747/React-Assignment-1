@@ -13,7 +13,7 @@ export const Navbar = ({children, subtitle, button, something, classname}) => {
                     <div>
                         <Subtitle>{subtitle}</Subtitle>
                         <div className={CN("flex items-center", classname)}>
-                        <span>{something}</span><Text>{children}</Text>
+                        <span className="lg:block hidden">{something}</span><Text>{children}</Text>
                         </div>
                     </div>
                     <div className="flex flex-col md:flex-row gap-2 md:gap-[10px] lg:gap-3 xl:gap-[14px] items-center">

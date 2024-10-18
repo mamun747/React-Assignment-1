@@ -3,7 +3,6 @@ import { Navbar } from "../Home/Navbar"
 import { Button } from "./Button"
 
 export const ErrorMsg = () => {
-    document.getElementsByTagName('body')[0].style.background = "#dddddd";
     const navigate = useNavigate();
     const handleClick = () => {
         navigate('/Dashboard');
