@@ -8,8 +8,8 @@ export const Card = () => {
             <div className='flex flex-wrap gap-[25px] xl:justify-normal justify-center items-center'>
                 {
                     cardItems.map(({img, title, subTitle, price, img2, text}, i) => (
-                        <div key={i}>
-                            <div className='relative hover:scale-105 transition-all'>
+                        <div key={i} className='hover:scale-105 transition-all'>
+                            <div className='relative'>
                             <img src={img} alt="" />
                             <div className='absolute top-3 right-3 p-[10px] bg-white rounded-[40px]'>
                                 <div className='flex gap-[4px]'>

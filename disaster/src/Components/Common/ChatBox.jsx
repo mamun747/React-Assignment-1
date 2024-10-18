@@ -1,4 +1,17 @@
+import { useState } from "react";
+
 export const ChatBox = () => {
+  const [data, setData] = useState("");
+  const [message, setMessage] = useState([]);
+  const onclick = () => {
+    console.log(data)
+  }
+  const handleSend = () => {
+    if(data.trim()){
+      setMessage([...message, data]);
+      setData("")
+    }
+  }
     return (
       <>
         <div className="absolute -top-[420px] right-2 shadow-lg">
@@ -30,15 +43,24 @@ export const ChatBox = () => {
                 Lorem ipsum dolar sit general sac mascho werho
                 </p>
               </div>
+                {message.map((message, i) => (
+              <div className="bg-chatBg w-[213px] rounded-[7px] h-[57px] float-right block" key={i}>
+                  <div>
+                    <p className="py-[15px] px-[13px] text-twelve text-white">{message}</p>
+                  </div>
+              </div>
+                ))}
               <div className="clear-both"></div>
-              <div className="pt-[15px]">
+            </div>
+              <div className="py-[12px] px-[10px]">
                 <input
                   type="text"
                   className="text-accent w-full py-[17px] ps-[10px] border border-[#E5E7EB] rounded-md outline-none text-twelve"
                   placeholder="Enter your question..."
+                  value={data}
+                  onChange={(e) => setData(e.target.value)}
                 />
               </div>
-            </div>
   
             {/* Footer Icons and Send Button */}
             <div className="flex justify-between items-center px-[15px] py-[10px] border-t border-[#E5E7EB]">
@@ -48,7 +70,7 @@ export const ChatBox = () => {
                 <img src="/share.png" alt="Share" className="w-6 h-6 cursor-pointer hover:opacity-75" />
               </div>
               <div>
-                <button className="bg-orange text-white text-twelve py-[11px] px-[25px] rounded-full hover:bg-orange-600 transition">
+                <button className="bg-orange text-white text-twelve py-[11px] px-[25px] rounded-full hover:bg-orange-600 transition"onClick={handleSend}>
                   Send
                 </button>
               </div>
@@ -58,4 +80,3 @@ export const ChatBox = () => {
       </>
     );
   };
-  

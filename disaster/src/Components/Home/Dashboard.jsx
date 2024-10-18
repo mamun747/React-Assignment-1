@@ -20,7 +20,7 @@ export const Cards = () => {
             }
             </div>
           <button
-            className="hover:opacity-80  mt-[77px] mb-[117px] transition-all float-end"
+            className="hover:opacity-80  mt-[67px] mb-[117px] transition-all float-end"
             onClick={toggleOption}
           >
             {
