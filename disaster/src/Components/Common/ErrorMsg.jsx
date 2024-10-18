@@ -10,10 +10,6 @@ export const ErrorMsg = () => {
     }
   return (
     <>
-    <Navbar subtitle={"Welcome back"} children={"Activities"} button={
-        <Button>Cypher AI</Button>
-    }/>
-
     <div className="flex flex-col gap-3 justify-center items-center w-full h-[600px]">
         <h1 className="font-bold text-6xl text-accent">503</h1>
         <p className="text-2xl font-semibold text-accent">Service Unavailable :(</p>
