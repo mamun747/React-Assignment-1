@@ -28,8 +28,10 @@ export const NewIncident = ({onclick}) => {
         <div className="flex flex-wrap gap-[11px] pt-[25px] md:justify-normal justify-center">
           {
             NewIncidentsData.map(({img, title}, i) => (
-              <div key={i} className="w-[180px] h-[69px] bg-chatboxBg rounded-md border border-[#E4E4E7] flex gap-[7.5px] items-center ps-[20.28px] flex-wrap hover:bg-orange group cursor-pointer">
-                <img className="group-hover:" src={img} alt="" />
+              <div key={i} className="w-[180px] h-[69px] bg-chatboxBg rounded-md border border-[#E4E4E7] flex gap-[7.5px] items-center ps-[20.28px] flex-wrap hover:bg-orange group cursor-pointer hover:scale-105 transition-all">
+                <p className="group-hover:filter group-hover:invert group-hover:brightness-0">
+                <img  src={img} alt="" />
+                </p>
                 <div>
                   <Subtitle classname="text-[14px] pb-0 group-hover:text-white">{title}</Subtitle>
                 </div>

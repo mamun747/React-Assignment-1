@@ -7,6 +7,7 @@ import { Locations } from './Components/Home/Locations'
 import { Activities } from './Components/Home/Activities'
 import { Documents } from './Components/Home/Documents'
 import { CypherAI } from './Components/Home/CypherAI'
+import { ErrorMsg } from './Components/Common/ErrorMsg'
 
 function App() {
   return (
@@ -17,11 +18,11 @@ function App() {
           </Route>
           <Route path='/Dashboard' element={<Layout/>}/>
           <Route path='/incidents' element={<Incidents/>}/>
-          <Route path='/secondnav' element={<SecondNav/>}/>
           <Route path='/Locations' element={<Locations/>}/>
           <Route path='/Activities' element={<Activities/>}/>
           <Route path='/Documents' element={<Documents/>}/>
           <Route path='/Cypher AI' element={<CypherAI/>}/>
+          <Route path='*' element={<ErrorMsg/>}/>
           <Route/>
         </Routes>
       </BrowserRouter>

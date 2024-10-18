@@ -21,7 +21,7 @@ export const Card = () => {
                             <div className='space-y-[16px]'>
                             <p className='font-bold text-base pt-5'>{title}</p>
                             <p className='text-[14px] text-accent'>{subTitle}</p>
-                            <p>{price}</p>
+                            <p className='font-bold'>{price}</p>
                             </div>
                             </div>
                     ))

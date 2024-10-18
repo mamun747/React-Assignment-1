@@ -90,7 +90,7 @@ export const NewIncidentsData = [
         title: "Blizzard"
     },
     {
-        img: "/Cold/Freezing.png",
+        img: "/Freezing.png",
         title: "Cold/Freezing"
     },
     {
@@ -118,7 +118,7 @@ export const NewIncidentsData = [
         title: "Lightning"
     },
     {
-        img: "/ManMade.png",
+        img: "/ManMade.svg",
         title: "Man Made"
     },
     {
@@ -130,7 +130,7 @@ export const NewIncidentsData = [
         title: "Severe Storm"
     },
     {
-        img: "/Strong Wind.png",
+        img: "/StrongWind.png",
         title: "Strong Wind"
     },
     {
