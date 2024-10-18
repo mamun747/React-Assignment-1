@@ -7,15 +7,7 @@ import { Plus } from "../Icons/Icon"
 
 export const Incidents = () => {
   // Retrieve the active state from localStorage or default to true
-  const [active, setActive] = useState(() => {
-    const savedActive = localStorage.getItem("active");
-    return savedActive === "false" ? false : true; // Default to true if not in localStorage
-  });
-
-  // Store the active state in localStorage whenever it changes
-  useEffect(() => {
-    localStorage.setItem("active", active);
-  }, [active]);
+  const [active, setActive] = useState(false);
 
   const toggleActive = () => {
     setActive((prev) => !prev);
@@ -24,7 +16,10 @@ export const Incidents = () => {
   return (
     <>
       {/* Conditionally render based on active state */}
-      {active ? (
+      {active ?  (
+        /* Show the Starting component if active is false */
+        <Starting onclick={toggleActive}/>
+      ) : (
         <>
           {/* Show the Navbar and Card if active is true */}
           <Navbar
@@ -42,10 +37,8 @@ export const Incidents = () => {
           </Navbar>
           <Card />
         </>
-      ) : (
-        /* Show the Starting component if active is false */
-        <Starting onclick={toggleActive}/>
-      )}
+      ) 
+    }
     </>
   );
 };

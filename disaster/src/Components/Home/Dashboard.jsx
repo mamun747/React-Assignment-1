@@ -20,14 +20,14 @@ export const Cards = () => {
             }
             </div>
           <button
-            className="pt-[77px] pb-[117px] float-end"
+            className="hover:opacity-80  mt-[77px] mb-[117px] transition-all float-end"
             onClick={toggleOption}
           >
             {
-                active ? <img src="/cross.png" className="p-5 shadow-cross-shadow rounded-full" alt="" /> :  <ChatOption/>
+                active ? <img src="/cross.png" className="hover:scale-110 p-5 shadow-cross-shadow rounded-full" alt="" /> :  <ChatOption/>
             }
           </button>
-        </div>
+          </div>
       </Container>
     </>
   );

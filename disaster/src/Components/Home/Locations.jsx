@@ -61,7 +61,7 @@ export const Locations = () => {
                 {
                     Buildings.map(({img, title, subTitle, price, img2, text}, i) => (
                         <div key={i}>
-                            <div className='relative'>
+                            <div className='relative hover:scale-105 transition-all'>
                             <img src={img} alt="" />
                             <div className='absolute top-2 right-6 p-[7px] bg-white rounded-[40px]'>
                                 <div className='flex gap-[4px] items-center'>
@@ -88,7 +88,7 @@ export const Locations = () => {
               <p className="font-bold text-[14px]">Locations</p>
               <p className="text-[14px] text-[##0A0A0A] underline cursor-pointer">See all</p>
               </div>
-              <div className="w-full bg-chatboxBg  rounded-[10px]">
+              <div className="w-full bg-chatboxBg  rounded-[10px] hover:scale-105 transition-all">
                 <div className="py-[15px] ps-[10px] flex gap-[17px] items-center">
                   <img src="/building1.png" className="w-[78px] h-auto rounded-[10px]" 
                   alt="" />
@@ -105,7 +105,7 @@ export const Locations = () => {
               </div>
               </div>
               <div className="pt-[15px]">
-              <div className="w-full bg-chatboxBg  rounded-[10px]">
+              <div className="w-full bg-chatboxBg  rounded-[10px] hover:scale-105 transition-all">
                 <div className="py-[15px] ps-[10px] flex gap-[17px] items-center">
                   <img src="/building1.png" className="w-[78px] h-auto rounded-[10px]" 
                   alt="" />
@@ -130,7 +130,7 @@ export const Locations = () => {
               <p className="font-bold text-[14px]">Documents</p>
               <p className="text-[14px] text-[##0A0A0A] underline cursor-pointer">See all</p>
               </div>
-              <div className="w-full bg-chatboxBg  rounded-[10px]">
+              <div className="w-full bg-chatboxBg  rounded-[10px] hover:scale-105 transition-all">
                 <div className="py-[15px] ps-[10px] flex gap-[17px] items-center">
                   <img src="/building1.png" className="w-[78px] h-auto rounded-[10px]" 
                   alt="" />
@@ -146,8 +146,8 @@ export const Locations = () => {
                 </div>
               </div>
               </div>
-              <div className="pt-[15px]">
-              <div className="w-full bg-chatboxBg  rounded-[10px]">
+              <div className="pt-[15px] pb-[30px]">
+              <div className="w-full bg-chatboxBg  rounded-[10px] hover:scale-105 transition-all">
                 <div className="py-[15px] ps-[10px] flex gap-[17px] items-center">
                   <img src="/building1.png" className="w-[78px] h-auto rounded-[10px]" 
                   alt="" />

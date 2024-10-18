@@ -1,5 +1,5 @@
 import { Button } from "../Common/Button"
-import { Cards } from "../Home/Cards"
+import { Cards } from "../Home/Dashboard"
 import { Navbar } from "../Home/Navbar"
 
 export const Layout = () => {

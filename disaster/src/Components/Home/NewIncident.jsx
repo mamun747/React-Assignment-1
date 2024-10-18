@@ -3,20 +3,12 @@ import { Nav } from "../Common/Navclasse"
 import { SecondNav } from "../Common/SecondNav"
 import { Subtitle } from "../Common/subtitle"
 import { NewIncidentsData } from "../Data/data"
-import { useEffect } from "react"
 import { Description } from "./Description"
 import { CommonContainer } from "../Common/CommonContainer"
 import { Title } from "../Common/Text"
 
 export const NewIncident = ({onclick}) => {
-  const [isActive, setIsActive] = useState(() => {
-    const storage = localStorage.getItem("isActive");
-    storage === "false" ? false : true;
-  });
-
-    useEffect(() => {
-    localStorage.setItem("isActive", isActive);
-  }, [isActive]);
+  const [isActive, setIsActive] = useState(false);
 
   const togglePage = () => {
     setIsActive(pre => !pre);
@@ -39,7 +31,7 @@ export const NewIncident = ({onclick}) => {
               <div key={i} className="w-[180px] h-[69px] bg-chatboxBg rounded-md border border-[#E4E4E7] flex gap-[7.5px] items-center ps-[20.28px] flex-wrap hover:bg-orange group cursor-pointer">
                 <img className="group-hover:" src={img} alt="" />
                 <div>
-                  <p><Subtitle classname="text-[14px] pb-0 group-hover:text-white">{title}</Subtitle></p>
+                  <Subtitle classname="text-[14px] pb-0 group-hover:text-white">{title}</Subtitle>
                 </div>
               </div>
             ))

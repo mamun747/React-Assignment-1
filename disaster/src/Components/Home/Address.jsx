@@ -3,15 +3,17 @@ import { Subtitle } from "../Common/subtitle";
 import { Title } from "../Common/Text";
 import { Nav } from "../Common/Navclasse";
 import { SecondNav } from "../Common/SecondNav";
+import { useNavigate } from "react-router-dom";
 
 export const Address = ({toggle}) => {
+  const navigate = useNavigate();
+  const handleEvent = () => {
+    navigate('/Locations')
+  }
   return (
     <>
-    {/* {
-      open === "false" ? (
-    <> */}
     <Nav>
-      <SecondNav step="Finished" fonclick={toggle} thirdonclick={toggle}/>
+      <SecondNav step="Finished" secondonclick={handleEvent} fonclick={toggle} thirdonclick={toggle}/>
     </Nav>
       <CommonContainer>
         <div>
@@ -42,9 +44,6 @@ export const Address = ({toggle}) => {
           </div>
         </div>
       </CommonContainer>
-      {/* </>
-      ): <Locations/>
-    } */}
     </>
   );
 };

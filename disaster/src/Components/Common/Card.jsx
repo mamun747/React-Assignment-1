@@ -9,7 +9,7 @@ export const Card = () => {
                 {
                     cardItems.map(({img, title, subTitle, price, img2, text}, i) => (
                         <div key={i}>
-                            <div className='relative'>
+                            <div className='relative hover:scale-105 transition-all'>
                             <img src={img} alt="" />
                             <div className='absolute top-3 right-3 p-[10px] bg-white rounded-[40px]'>
                                 <div className='flex gap-[4px]'>

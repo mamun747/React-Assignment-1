@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Button } from "../Common/Button"
 import { CommonNav } from "../Common/CommonNav"
 import { Nav } from "../Common/Navclasse"
@@ -7,22 +7,16 @@ import { HorizontalLine } from "../Icons/Icon";
 import { NewIncident } from "./NewIncident";
 
 export const Starting = ({ onclick }) => {
-  const [active, setActive] = useState(() => {
-    const savedData = localStorage.getItem("active");
-    return savedData === "false" ? false : true;
-  });
+  const [active, setActive] = useState(false);
   const toggleActive = () => {
     setActive(pre => !pre)
   }
-  useEffect(() => {
-    localStorage.setItem("active", active)
-  }, [active]);
   return (
     <>
       <Nav>
         <CommonNav/>
       </Nav>
-      { active ? (
+      { active ? <NewIncident onclick={toggleActive}/> : (
         <>
 
       <div className="md:max-w-[815px] mx-auto h-[457px] mt-[85px]">
@@ -55,7 +49,7 @@ export const Starting = ({ onclick }) => {
           </div>
         </div>
         </>
-) : <NewIncident onclick={toggleActive}/>
+)
 }
     </>
   );
